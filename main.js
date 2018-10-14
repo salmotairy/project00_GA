@@ -1,5 +1,6 @@
 $(document).ready(function () {
     console.log('javascript connected!');
+
     // $('body').append('<header></header>');
     // $('body header').append('<nav></nav>');
     // $('body header nav').addClass("navigation");

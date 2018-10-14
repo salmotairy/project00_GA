@@ -3,6 +3,10 @@ body {
     
 }
 
+.landing-page {
+    display: none;
+}
+
 div.heading {    font: bold;
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
