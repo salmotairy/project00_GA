@@ -3,6 +3,11 @@ body {
     
 }
 
+
+
+
+
+
 .landing-page {
     display: none;
 }
@@ -18,9 +23,7 @@ div.heading {    font: bold;
 
 
 }
-h1 {
-    tex
-}
+
 .navigation {
     background-color: palegoldenrod;
     
@@ -29,10 +32,45 @@ h1 {
     display: inline-block;
 }
 button {
- width: auto;
- height: auto;
+ 
  display: inline;
  font-family: 'Times New Roman', Times, serif;
  font-size: 30px;
 
 }
+
+/* .boxes {
+    display: inline- block;
+
+} */
+
+
+ 
+  * {
+  margin: 0;
+  padding: 0; 
+}
+ 
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0; 
+}
+
+#board { 
+  padding: 0px; 
+  margin: 0 auto; 
+  margin-top: 25px; 
+}
+
+#board tr td { 
+  width: 150px; 
+  height: 150px; 
+  border: 5px solid white; 
+  font-family: Helvetica; 
+  font-size: 30px; 
+  text-align: center; 
+}
+
+#board tr td:hover { 
+  background:burlywood; 
+} 
