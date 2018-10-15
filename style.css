@@ -1,42 +1,32 @@
 body {
-    background-color: blanchedalmond;
-    
+  background-color: blanchedalmond;
 }
-
-
-
-
-
 
 .landing-page {
-    display: none;
-}
-
-div.heading {    font: bold;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: xx-large;
-    color:teal;
-    margin: 40px 20vw;
-    text-align: center;
-
-
-
-
+  background-color: azure;
+  display: none;
 }
 
 .navigation {
-    background-color: palegoldenrod;
-    
+  background-color: palegoldenrod;
 }
-.container {
-    display: inline-block;
+
+div.heading {
+  font: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: xx-large;
+  color: teal;
+  margin: 40px 20px;
+  text-align: center;
+}
+.selection {
+  margin: 25vw;
+  margin-top: 20px;
 }
 button {
- 
- display: inline;
- font-family: 'Times New Roman', Times, serif;
- font-size: 30px;
-
+  display: inline;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
 }
 
 /* .boxes {
@@ -44,33 +34,31 @@ button {
 
 } */
 
-
- 
-  * {
+* {
   margin: 0;
-  padding: 0; 
-}
- 
-table { 
-  border-collapse: collapse; 
-  border-spacing: 0; 
+  padding: 0;
 }
 
-#board { 
-  padding: 0px; 
-  margin: 0 auto; 
-  margin-top: 25px; 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-#board tr td { 
-  width: 150px; 
-  height: 150px; 
-  border: 5px solid white; 
-  font-family: Helvetica; 
-  font-size: 30px; 
-  text-align: center; 
+#board {
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 25px;
 }
 
-#board tr td:hover { 
-  background:burlywood; 
-} 
+#board tr td {
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  font-family: Helvetica;
+  font-size: 30px;
+  text-align: center;
+}
+
+#board tr td:hover {
+  background: burlywood;
+}
