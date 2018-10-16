@@ -1,12 +1,12 @@
 $(document).ready(function() {
   console.log("javascript connected!");
+
   var placesLeft = 9;
   var xArray = [];
   var oArray = [];
-  var result = "";
-
-  // I just created a div, put that div at the end of #board
-  // $()
+  var xWins = 0;
+  var oWins = 0;
+  var draws = 0;
   function onClick() {
     if ($(this).text() === "") {
       if (placesLeft % 2 == 1) {
@@ -14,19 +14,30 @@ $(document).ready(function() {
         xArray.push(Number($(this).attr("id")));
         placesLeft--;
         console.log(placesLeft);
-        var result = isGameOver(xArray);
+        result = isGameOver(xArray);
         if (result !== "") {
           if (xArray.length >= 3) {
             window.setTimeout(function() {
-              alert("The first " + result);
+              xWins++;
+              swal({
+                title: "Good job!",
+                text: "The first " + result,
+                icon: "success"
+              });
+              $("td#4").text(xWins);
               play();
             }, 200);
           }
         } else if (placesLeft === 0) {
           window.setTimeout(function() {
-            alert("No Winner!, the game went to a draw");
+            draws++;
+            swal({
+              title: "No Winner!",
+              text: "The game went to a draw",
+              icon: "success"
+            });
+            $("td#6").text(draws);
           }, 200);
-          play();
         }
       } else {
         $(this).text("O");
@@ -37,14 +48,28 @@ $(document).ready(function() {
           var result = isGameOver(oArray);
           if (result !== "") {
             window.setTimeout(function() {
-              alert("The second " + result);
+              // alert("The second " + result);
+              swal({
+                title: "Good job!",
+                text: "The second " + result,
+                icon: "success"
+              });
+              oWins++;
+              $("td#5").text(oWins);
               play();
             }, 200);
           } else if (placesLeft === 0) {
             window.setTimeout(function() {
-              alert("No Winner!, the game went to a draw");
+              // alert("No Winner!, the game went to a draw");ß
+              draws++;
+              swal({
+                title: "No Winner!",
+                text: "The game went to a draw",
+                icon: "success"
+              });
+              $("td#6").text(draws);
+              play();
             }, 200);
-            play();
           }
         }
       }
@@ -54,7 +79,6 @@ $(document).ready(function() {
       }, 200);
     }
   }
-
   function play() {
     $("#board td")
       .empty()
