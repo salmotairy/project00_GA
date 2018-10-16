@@ -4,10 +4,7 @@ $(document).ready(function() {
   var xArray = [];
   var oArray = [];
   var result = "";
-  $("<div/>", {
-    class: "scoring-board",
-    title: "Scoring Board"
-  }).appendTo("#board");
+
   // I just created a div, put that div at the end of #board
   // $()
   function onClick() {
@@ -68,7 +65,7 @@ $(document).ready(function() {
     oArray = [];
     result = "";
     placesLeft = 9;
-    $("td").click(onClick);
+    $("#board td").click(onClick);
   }
 
   play();

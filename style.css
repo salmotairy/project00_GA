@@ -1,7 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: blanchedalmond;
 }
+.main {
+  display: flex;
+}
+div.left {
+  width: 70%;
+  background-color: tan;
+  justify-content: space-around;
+}
 
+div.right {
+  width: 30%;
+  padding: 100px;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#board {
+  margin-top: 25px;
+  margin-left: 150px;
+}
+/* 
 .landing-page {
   background-color: azure;
   display: none;
@@ -9,8 +38,8 @@ body {
 
 .navigation {
   background-color: palegoldenrod;
-}
-
+} */
+/* 
 div.heading {
   font: bold;
   font-family: "Times New Roman", Times, serif;
@@ -18,8 +47,8 @@ div.heading {
   color: teal;
   margin: 40px 20px;
   text-align: center;
-}
-.selection {
+} */
+/* .selection {
   margin: 25vw;
   margin-top: 20px;
 }
@@ -27,38 +56,45 @@ button {
   display: inline;
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
-}
-
-/* .boxes {
-    display: inline- block;
-
 } */
-
+/* 
 * {
   margin: 0;
   padding: 0;
+} */
+
+.names {
+  display: flex;
+  justify-content: space-around;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-#board {
-  padding: 0px;
-  margin: 0 auto;
+#scoring {
   margin-top: 25px;
 }
 
-#board tr td {
-  width: 150px;
-  height: 150px;
-  border: 5px solid white;
-  font-family: Helvetica;
+input {
+  background-color: darkkhaki;
+}
+
+.right td {
+  width: 15vw;
+  height: 70px;
+  border: 5px solid gray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   text-align: center;
 }
 
-#board tr td:hover {
-  background: burlywood;
+.left td {
+  width: 15vw;
+  height: 150px;
+  border: 10px solid white;
+  font-family: cursive;
+  font-size: 100px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.left td:hover {
+  background: rgb(241, 149, 28);
 }
