@@ -20,11 +20,20 @@ div.right {
   display: flex;
   flex-direction: column;
 }
-
+div #options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 table {
   border-collapse: collapse;
 }
 
+input {
+  background-color: darkkhaki;
+  height: 15px;
+  display: inline;
+}
 #board {
   margin-top: 25px;
   margin-left: 150px;
@@ -73,13 +82,14 @@ h2 {
 p {
   margin-top: 0;
   margin-left: 10px;
+  display: inline-block;
 }
 #scoring {
   margin-top: 25px;
   font-family: fantasy;
 }
 
-input {
+.names input {
   background-color: darkkhaki;
   height: 30px;
 }

@@ -7,7 +7,24 @@ $(document).ready(function() {
   var xWins = 0;
   var oWins = 0;
   var draws = 0;
+  // if (document.getElementById('r1').checked) {
+  //   rate_value = document.getElementById('r1').value;
+  // }
+  $(".opponent").on("change", function() {
+    var opponent = $(".opponent:checked").val();
+    console.log(opponent);
+    if (opponent === "AI") {
+      $(".player2").hide();
+    } else {
+      $(".player2").show();
+    }
+  });
+  // if (opponent === "AI") {
+  //   $(".player2").hide();
+  // }
+
   function onClick() {
+    console.log(opponent);
     if ($(this).text() === "") {
       if (placesLeft % 2 == 1) {
         $(this).text("X");
