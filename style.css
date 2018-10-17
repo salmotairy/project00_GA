@@ -8,22 +8,27 @@ body {
   display: flex;
 }
 div.left {
-  width: 70%;
+  width: 65%;
   background-color: tan;
   justify-content: space-around;
 }
 
 div.right {
-  width: 30%;
-  padding: 100px 10px 10px 10px;
+  width: 35%;
+  padding: 40px 10px 10px 10px;
   background-color: cornflowerblue;
   display: flex;
   flex-direction: column;
 }
-div #options {
+#submit {
+  height: 30px;
+}
+.options1,
+.options2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /* justify-content: flex-start; */
+  /* width: 95vw; */
 }
 table {
   border-collapse: collapse;
@@ -32,7 +37,7 @@ table {
 input {
   background-color: darkkhaki;
   height: 15px;
-  display: inline;
+  /* display: inline; */
 }
 #board {
   margin-top: 25px;
@@ -82,7 +87,6 @@ h2 {
 p {
   margin-top: 0;
   margin-left: 10px;
-  display: inline-block;
 }
 #scoring {
   margin-top: 25px;

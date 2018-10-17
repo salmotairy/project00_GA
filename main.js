@@ -7,24 +7,101 @@ $(document).ready(function() {
   var xWins = 0;
   var oWins = 0;
   var draws = 0;
-  // if (document.getElementById('r1').checked) {
-  //   rate_value = document.getElementById('r1').value;
-  // }
-  $(".opponent").on("change", function() {
-    var opponent = $(".opponent:checked").val();
-    console.log(opponent);
+  var opponent;
+  var turn;
+
+  $(".options2").hide();
+
+  $(".options1").on("change", opts);
+  $(".options2").on("change", opts);
+
+  function opts() {
+    opponent = $(".opponent:checked").val();
     if (opponent === "AI") {
-      $(".player2").hide();
-    } else {
+      $(".options2").show();
+      turn = $(".turn:checked").val();
+      myTurn(turn);
+    } else if (opponent === "human") {
+      $(".options2").hide();
+      $(".player1").show();
       $(".player2").show();
+    } else {
+      alert("call the developer!\n something went wrong.");
     }
-  });
-  // if (opponent === "AI") {
-  //   $(".player2").hide();
-  // }
+  }
+
+  function myTurn(turn) {
+    if (turn === "first") {
+      $(".player1").show();
+      $(".player2").hide();
+    } else if (turn === "second") {
+      $(".player1").hide();
+      $(".player2").show();
+    } else {
+      alert("call the developer!\n something went wrong.");
+    }
+  }
+
+  //   var opponent = $(".opponent:checked").val();
+  //   console.log(opponent);
+
+  //   if (opponent === "AI") {
+  //     $(".options2").show();
+  //     var turn = $(".turn:checked").val();
+  //     console.log(turn);
+  //   } else if (opponent === "human") {
+  //     console.log("human");
+
+  //   } else{
+
+  //   }
+
+  //     if (turn === "first") {
+  //       $(".player1").show();
+  //       $(".player2").hide();
+
+  //       // $(".names").css({
+  //       //   justifyContent: "flex-start"
+  //       // });
+  //       // $("p.player1").css({
+  //       //   width: "100px",
+  //       //   height: "35px"
+  //       // });
+  //       // $("input.player1").css({
+  //       //   width: "130px",
+  //       //   height: "30px"
+  //       // });
+  //       // $("input.player1").css("width", "60px");
+  //       // } else {
+  //       // $(".player1").hide();
+  //       //     $(".names").css({
+  //       //       justifyContent: "flex-end"
+  //       //     });
+  //       //     $("p.player1").css({
+  //       //       width: "100px",
+  //       //       height: "35px"
+  //       //     });
+  //       //     $("input.player1").css({
+  //       //       width: "130px",
+  //       //       height: "30px"
+  //       //     });
+  //       //   }
+  //     } else {
+  //       $(".options2").hide();
+
+  //       $(".player1").hide();
+  //       $(".player2").show();
+
+  //       //   $(".names").css({
+  //       //     justifyContent: "space-around"
+  //       //   });
+  //       // $("p.player1").css("width", "auto");
+  //       // $("input.player1").css("width", "auto");
+  //     }
+  //   }
+  // });
 
   function onClick() {
-    console.log(opponent);
     if ($(this).text() === "") {
       if (placesLeft % 2 == 1) {
         $(this).text("X");
@@ -39,7 +116,7 @@ $(document).ready(function() {
               swal({
                 title: "Good job!",
                 text: "The first " + result,
-                icon: "success"
+                icon: "images/thumps-up.png"
               });
               $("td#4").text(xWins);
               play();
@@ -110,30 +187,37 @@ $(document).ready(function() {
   }
 
   play();
+  // function checkThree(num1,num2,num3,array)
+  // {
+  //   if (array.includes(num1) && array.includes(num2) && array.includes(num3)) {
+  //     return true
+  // }else {
+  //     return false
 
-  function isGameOver(Array) {
-    if (Array.includes(11) && Array.includes(12) && Array.includes(13)) {
+  // }
+  function isGameOver(array) {
+    if (array.includes(11) && array.includes(12) && array.includes(13)) {
       console.log("won");
       return "player won the game";
-    } else if (Array.includes(21) && Array.includes(22) && Array.includes(23)) {
+    } else if (array.includes(21) && array.includes(22) && array.includes(23)) {
       console.log("won");
       return "player won the game";
-    } else if (Array.includes(31) && Array.includes(32) && Array.includes(33)) {
+    } else if (array.includes(31) && array.includes(32) && array.includes(33)) {
       console.log("won");
       return "player won the game";
-    } else if (Array.includes(11) && Array.includes(21) && Array.includes(31)) {
+    } else if (array.includes(11) && array.includes(21) && array.includes(31)) {
       console.log("won");
       return "player won the game";
-    } else if (Array.includes(12) && Array.includes(22) && Array.includes(32)) {
+    } else if (array.includes(12) && array.includes(22) && array.includes(32)) {
       console.log("won");
       return "player won the game";
-    } else if (Array.includes(13) && Array.includes(23) && Array.includes(33)) {
+    } else if (array.includes(13) && array.includes(23) && array.includes(33)) {
       console.log("won");
       return "player won the game";
-    } else if (Array.includes(11) && Array.includes(22) && Array.includes(33)) {
+    } else if (array.includes(11) && array.includes(22) && array.includes(33)) {
       console.log("won");
       return "player won the game";
-    } else if (Array.includes(13) && Array.includes(22) && Array.includes(31)) {
+    } else if (array.includes(13) && array.includes(22) && array.includes(31)) {
       console.log("won");
       return "player won the game";
     }
