@@ -12,6 +12,9 @@
 
 ##### It is not that hard game. However, please note that this version may have some errors and I appreciate your patient.
 
+go to the game and give it a try
+https://salmotairy.github.io/project00_GA/
+
 ## Unsolved Problems
 
 ##### I was working to introduce some new features when I ran of time and find myself forced to submit this version. The main feature that may make some problems is playing with AI. After some time to build on this feature and went back to remove it so there may be some code left due to eliminating this feature.
