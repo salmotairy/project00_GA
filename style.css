@@ -5,7 +5,7 @@ body {
   background-color: blanchedalmond;
 }
 .main {
-  display: flex;
+  display: none;
 }
 div.left {
   width: 65%;
@@ -43,16 +43,14 @@ input {
   margin-top: 25px;
   margin-left: 150px;
 }
-/* 
 .landing-page {
   background-color: azure;
-  display: none;
 }
 
-.navigation {
-  background-color: palegoldenrod;
-} */
-/* 
+.landing-page button {
+  display: block;
+  margin: auto;
+}
 div.heading {
   font: bold;
   font-family: "Times New Roman", Times, serif;
@@ -60,21 +58,19 @@ div.heading {
   color: teal;
   margin: 40px 20px;
   text-align: center;
-} */
-/* .selection {
-  margin: 25vw;
-  margin-top: 20px;
 }
+
 button {
-  display: inline;
+  display: flex;
+  align-items: center;
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
-} */
-/* 
+}
+
 * {
   margin: 0;
   padding: 0;
-} */
+}
 
 .names {
   display: flex;
